@@ -39,8 +39,8 @@ class PercentageCalculator {
     const averageIncomeFamily = income / this.MONTHS_IN_YEAR;
     const averageIncome = averageIncomeFamily / familyMembers;
 
-    const childrenValue50 = !children ? 0 : (0.5 * this.LIVING_WAGE) * (!children ? 1 : children);
-    const childrenValue75 = !children ? 0 : (0.75 * this.LIVING_WAGE) * (!children ? 1 : children);
+    const childrenValue50 =  (0.5 * this.LIVING_WAGE) * (!children ? 1 : children);
+    const childrenValue75 =  (0.75 * this.LIVING_WAGE) * (!children ? 1 : children);
     
     const value75 = (averageIncomeFamily + childrenValue50) / familyMembers;
     const value100 = (averageIncomeFamily + childrenValue75) / familyMembers;
